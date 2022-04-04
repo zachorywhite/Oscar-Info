@@ -1,0 +1,75 @@
+html, body{
+	background-color: #1a1a1a;
+	font-family: "Roboto", sans-serif;
+
+}
+
+hh1{
+	color: #fff;
+	font-size: 22px;
+	letter-spacing: 0.5px;
+	font-family: 'Source Code Pro', monospace;
+}
+
+body{
+	margin-top: 20px;
+	color: #B4B4B4;
+
+}
+
+a{
+	color: #4693c6;
+	text-decoration: none;
+}
+
+.heading{
+	
+}
+
+.content{
+	padding-top: 5px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+
+.logo{
+	font-family: 'Questrial', sans-serif;
+	font-weight: 900;
+	font-size: 35px;
+	color: #fff;
+}
+
+.nav{
+	text-align: right;
+
+	
+}
+
+.sub{
+	color: #eee;
+	display:inline-block;
+	font-weight: 300;
+}
+
+pre {
+    border-left: 2px solid #4693c6;
+    background: #333;
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+pre {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0px;
+}
+
+code{
+	width: 400px;
+}
+
+pre, code {
+    font-family: 'Source Code Pro', monospace;
+}

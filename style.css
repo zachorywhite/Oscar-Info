@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+html, body
+{
+    background-color: #000;
+    margin: 0;
+    border: 0;
+}
+        
+header
+{
+    height: 50px;
+}
+                
+.head-div
+{
+    padding-top: 5%;
+    margin-left: 30%;       
+    margin-right: 30%;      
+    text-align: center;
+    
+}
+
+#head-link{
+    text-decoration: none;
+    color: #fff;
+}
+
+#home-link{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Questrial', sans-serif;
+    text-transform: uppercase;
+}
+        
+/* DROPDOWN BARS */
+#drop-menu{
+    display: flex;
+    justify-content: center;
+}
+        
+#year-dropdown
+{
+    width: 100px;
+}
+        
+#category-dropdown{
+    margin-left: 5px;
+    width: 100px;
+}
+        
+#go-button
+{
+    margin-left: 5px;
+}
+        
+/* DISPLAY BODY */
+.display
+{
+    background-color: white;
+    margin: 20px 30% 40px 30%;
+    min-height: 100pv;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

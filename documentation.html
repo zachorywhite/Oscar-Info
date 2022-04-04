@@ -1,0 +1,144 @@
+<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>OSCAI INFO | API</title>
+		<link rel="stylesheet" href="api.css">
+	</head>
+	
+	<div class='content'>
+	<div class="heading">
+		<div class="logo">
+			<a href='http://oscarinfo-com.stackstaging.com/'>OSCAR INFO</a><br>
+		</div>
+		<div class="sub">XxGitLordzxX | API Documentation</div>
+		<br><div class="nav">
+			<a href='https://github.com/ToasterLady/Xx-Git-Lordz-xX'>view source on github</a> | <a href='http://oscarinfo-com.stackstaging.com/'>return to website</a>
+		</div>
+	</div>
+	
+	<br>
+	Our website pulls Oscar nominated movies from our database and displays them on the page. Each movie contains an ID value, the year it was nominated, the category in which it was nominated, whether it won or not, and who was nominated.
+	
+	The webpage contains 5 different ways to search for movies:<br><br>
+	
+	<small>
+		<li>Pressing search button without selections displays every nomination</li>
+		<li>Only first dropdown year selected displays every nomination from that year</li>
+		<li>Only first dropdown year selected and category from that year displays nominations of selected category from the selected year </li>
+		<li>First year and second year dropdowns only selected displays range of nominations between selected years</li>
+		<li>First year, second year, and category dropdown selected displays nominations of a shared category from between the range of the two selected years</li>
+	</small><br>
+	The data is queried from our database by our API to provide REST endpoints that deliver resources in JSON.
+	<br>
+	By using the HTTP method GET on our REST API we are able to return collections/singleton resources and access them.
+	<br><br>
+	
+	<hh1><b>Read Entire List: </b></hh1>
+	<br>
+	GET read.php
+
+	<pre><code>
+http://oscarinfo-com.stackstaging.com/api/movie/read.php
+	</code></pre>
+	
+	Using the GET method on the read.php page will provide a collection of all the Oscar nominations as an array of objects.
+	<br><br>
+	
+	<hh1><b>Read One Category: </b></hh1>
+	<br>
+	GET read_category.php
+
+	<pre><code>
+http://oscarinfo-com.stackstaging.com/api/movie/read_category.php?category={category}
+	</code></pre>
+	Using the GET method on the read_category.php will return all Oscar nominees of the selected category (category joined by +).
+	<br><br>
+	<b>EXAMPLE:</b> category = directing+(comedy+picture)
+	<br>
+		<pre><code>
+[
+    {
+        "id": "12",
+        "year": "1927",
+        "category": "DIRECTING (Comedy Picture)",
+        "winner": "TRUE",
+        "entity": "Lewis Milestone"
+    },
+    {
+        "id": "13",
+        "year": "1927",
+        "category": "DIRECTING (Comedy Picture)",
+        "winner": "FALSE",
+        "entity": "Ted Wilde"
+    }
+]
+	</code></pre><br>
+	<hh1><b>Read Multiple Years:</b></hh1>
+	<br>
+	GET read_multiyear.php
+	<pre><code>
+http://oscarinfo-com.stackstaging.com/api/movie/read_multiyear.php?fyear={year}&lyear={year}
+	</code></pre>
+	Using the GET method on read_multiyearCat.php returns all Oscar nominees of a shared category (category joined by +) between the range of two selected years(fyear & lyear).
+	<br><br>
+	
+	<hh1><b>Read Single Movie:</b></hh1>
+	<br>
+	GET read_single.php
+
+	<pre><code>
+http://oscarinfo-com.stackstaging.com/api/movie/read_single.php?id={id}
+	</code></pre>
+	
+Using the GET method on read_single.php returns a singleton resource of one single movie of the given ID number (id).
+	<br><br>
+	<b>EXAMPLE:</b> id=3157
+	<br>
+		<pre><code>
+{
+        "id": "3157",
+        "year": "1955",
+        "category": "ACTOR",
+        "winner": "TRUE",
+        "entity": "Ernest Borgnine"
+ }
+	</code></pre><br>
+	
+	<hh1><b>Read Single Year:</b></hh1>
+	<br>
+	GET read_year.php
+	<pre><code>
+http://oscarinfo-com.stackstaging.com/api/movie/read_year.php?year={year}
+	</code></pre>
+	Using the GET method on read_year.php returns all Oscar nominees of a selected year (year).
+	<br><br>
+	
+	<hh1><b>Read One Year with Category:</b></hh1>
+	<br>
+	GET read_yearcat.php
+	<pre><code>
+http://oscarinfo-com.stackstaging.com/api/movie/read_yearcat.php?year={year}&category={category}		
+	</code></pre>
+	Using the GET method of read_yearcat.php returns all Oscar nominees of a selected category (category joined by +) from a single year (year)
+	<br><br>	
+	<b>EXAMPLE:</b> year=1927 & category=actor
+	<br>
+		<pre><code>
+[
+    {
+        "id": "1",
+        "year": "1927",
+        "category": "ACTOR",
+        "winner": "FALSE",
+        "entity": "Richard Barthelmess"
+    },
+    {
+        "id": "2",
+        "year": "1927",
+        "category": "ACTOR",
+        "winner": "TRUE",
+        "entity": "Emil Jannings"
+    }
+]
+	</code></pre><br>
+	</div>
+</html>

@@ -1,0 +1,62 @@
+[
+  {
+    "year": 1927,
+    "category": "ACTOR",
+    "winner": "False",
+    "entity": "Richard Barthelmess"
+  },
+  {
+    "year": 1927,
+    "category": "ACTOR",
+    "winner": "True",
+    "entity": "Emil Jannings"
+  },
+  {
+    "year": 1927,
+    "category": "ACTRESS",
+    "winner": "False",
+    "entity": "Louise Dresser"
+  },
+  {
+    "year": 1927,
+    "category": "ACTRESS",
+    "winner": "True",
+    "entity": "Janet Gaynor"
+  },
+  {
+    "year": 1927,
+    "category": "ACTRESS",
+    "winner": "False",
+    "entity": "Gloria Swanson"
+  },
+  {
+    "year": 1928,
+    "category": "ACTRESS",
+    "winner": "False",
+    "entity": "Jeanne Eagels"
+  },
+  {
+    "year": 1928,
+    "category": "ACTRESS",
+    "winner": "False",
+    "entity": "Corinne Griffith"
+  },
+  {
+    "year": 1928,
+    "category": "ACTRESS",
+    "winner": "False",
+    "entity": "Bessie Love"
+  },
+  {
+    "year": 1928,
+    "category": "ACTRESS",
+    "winner": "True",
+    "entity": "Mary Pickford"
+  },
+  {
+    "year": 1928,
+    "category": "ART DIRECTION",
+    "winner": "False",
+    "entity": "Hans Dreier"
+  }
+]
